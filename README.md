@@ -1,2 +1,8 @@
 # Magento_Clearcache_Cron
-Magento module that will clear the cache each 30 minutes
+Magento 1.7.*, 1.8.*, 1.9.* module that will clear the cache each 30 minutes using a cron job.
+
+In order for this module to work, you need to configure Magento's cron
+
+To set your cron every 5 minutes you can use that command
+
+*/5 * * * * sh /path/to/magento/cron.sh
