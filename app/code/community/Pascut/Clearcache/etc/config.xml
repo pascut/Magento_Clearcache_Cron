@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+<modules>
+    <Pascut_Clearcache>
+        <version>1.0.0</version>
+    </Pascut_Clearcache>
+</modules>
+    <global>
+        <models>
+            <clearcache>
+                <class>Pascut_Clearcache_Model</class>
+            </clearcache>
+        </models>
+    </global>
+    <crontab>
+        <jobs>
+            <clear_cache_cron><!-- identifier -->
+                 <schedule>
+                     <cron_expr>*/30 * * * *</cron_expr> <!-- running cronjob each 30 minutes -->
+                 </schedule>
+                <run>
+                    <model>clearcache/Fire::clearCache</model>
+                </run>
+            </clear_cache_cron>
+        </jobs>
+    </crontab>
+</config>
